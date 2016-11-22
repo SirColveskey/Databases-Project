@@ -1,0 +1,67 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf460
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 CREATE TABLE Champions(\
+    Name CHAR(64) PRIMARY KEY,\
+    HPscaling CHAR(64),\
+    HP CHAR(64),\
+    MPscaling CHAR(64),\
+    MP CHAR(64),\
+    ADscaling CHAR(64),\
+    AD CHAR(64),\
+    AtkSscaling CHAR(64),\
+    AtkS CHAR(64),\
+    ARscaling CHAR(64),\
+    AR CHAR(64),\
+    MRscaling CHAR(64),\
+    MR CHAR(64)\
+);\
+\
+CREATE TABLE Abilities(\
+    Name CHAR(64) PRIMARY KEY,\
+    effect CHAR(64),\
+    mTrigger CHAR(64),\
+    Scaling CHAR(64),\
+    Damage CHAR(64),\
+    DamageType CHAR(64)\
+);\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+CREATE TABLE Masteries(\
+    Name CHAR(64) PRIMARY KEY,\
+    BaseStats CHAR(64),\
+    AName CHAR(64),\
+    FOREIGN KEY (AName) REFERENCES Abilities(Name)\
+);\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 CREATE TABLE Runes(\
+    Name CHAR(64) PRIMARY KEY,\
+    Attribute CHAR(64),\
+    Scaling CHAR(64),\
+    Value INT\
+);\
+\
+CREATE TABLE Items(\
+    Name CHAR(64) PRIMARY KEY,\
+    Attribute CHAR(64),\
+    Scaling CHAR(64),\
+    Value INT,\
+    AName CHAR(64),\
+    FOREIGN KEY (AName) REFERENCES Abilities(Name)\
+);\
+\
+CREATE TABLE ChampionAbilities(\
+    ID CHAR(64),\
+    CName CHAR(64),\
+    AName CHAR(64),\
+    PRIMARY KEY (ID),\
+    FOREIGN KEY (CName) REFERENCES Champions(Name),\
+    FOREIGN KEY (AName) REFERENCES Abilities(Name)\
+);\
+\
+\
+}
