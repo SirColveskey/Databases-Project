@@ -1,0 +1,235 @@
+CREATE TABLE Champions(
+    Name CHAR(64) PRIMARY KEY,
+    HPscaling CHAR(64),
+    HP CHAR(64),
+    MPscaling CHAR(64),
+    MP CHAR(64),
+    ADscaling CHAR(64),
+    AD CHAR(64),
+    AtkSscaling CHAR(64),
+    AtkS CHAR(64),
+    ARscaling CHAR(64),
+    AR CHAR(64),
+    MRscaling CHAR(64),
+    MR CHAR(64)
+);
+
+CREATE TABLE Abilities(
+    Name CHAR(64) PRIMARY KEY,
+    effect CHAR(64),
+    mTrigger CHAR(64),
+    Scaling CHAR(64),
+    Damage CHAR(64),
+    DamageType CHAR(64),
+    Cooldown INT
+);
+
+CREATE TABLE masteries(
+	Name VARCHAR(64), 
+	MasteryID INT PRIMARY KEY, 
+	MaxRank INT, 
+	Prereq INT
+);
+
+	Effect1 VARCHAR(600), 
+	Effect2 VARCHAR(600), 
+	Effect3 VARCHAR(600), 
+	Effect4 VARCHAR(600), 
+	Effect5 VARCHAR(600) 
+
+
+CREATE TABLE runes(
+	Name VARCHAR(64),
+	Tier INT,
+	FlatHPPoolMod FLOAT DEFAULT 0,
+	rFlatHPModPerLevel FLOAT DEFAULT 0,
+	FlatMPPoolMod FLOAT DEFAULT 0,
+	rFlatMPModPerLevel FLOAT DEFAULT 0,
+	PercentHPPoolMod FLOAT DEFAULT 0,
+	PercentMPPoolMod FLOAT DEFAULT 0,
+	FlatHPRegenMod FLOAT DEFAULT 0,
+	rFlatHPRegenModPerLevel FLOAT DEFAULT 0,
+	PercentHPRegenMod FLOAT DEFAULT 0,
+	FlatMPRegenMod FLOAT DEFAULT 0,
+	rFlatMPRegenModPerLevel FLOAT DEFAULT 0,
+	PercentMPRegenMod FLOAT DEFAULT 0,
+	FlatArmorMod FLOAT DEFAULT 0,
+	rFlatArmorModPerLevel FLOAT DEFAULT 0,
+	PercentArmorMod FLOAT DEFAULT 0,
+	rFlatArmorPenetrationMod FLOAT DEFAULT 0,
+	rFlatArmorPenetrationModPerLevel FLOAT DEFAULT 0,
+	rPercentArmorPenetrationModPerLevel FLOAT DEFAULT 0,
+	FlatPhysicalDamageMod FLOAT DEFAULT 0,
+	rFlatPhysicalDamageModPerLevel FLOAT DEFAULT 0,
+	PercentPhysicalDamageMod FLOAT DEFAULT 0,
+	FlatMagicDamageMod FLOAT DEFAULT 0,
+	rFlatMagicDamageModPerLevel FLOAT DEFAULT 0,
+	PercentMagicDamageMod FLOAT DEFAULT 0,
+	FlatMovementSpeedMod FLOAT DEFAULT 0,
+	rFlatMovementSpeedModPerLevel FLOAT DEFAULT 0,
+	PercentMovementSpeedMod FLOAT DEFAULT 0,
+	rPercentMovementSpeedModPerLevel FLOAT DEFAULT 0,
+	FlatAttackSpeedMod FLOAT DEFAULT 0,
+	PercentAttackSpeedMod FLOAT DEFAULT 0,
+	rPercentAttackSpeedModPerLevel FLOAT DEFAULT 0,
+	rFlatDodgeMod FLOAT DEFAULT 0,
+	rFlatDodgeModPerLevel FLOAT DEFAULT 0,
+	PercentDodgeMod FLOAT DEFAULT 0,
+	FlatCritChanceMod FLOAT DEFAULT 0,
+	rFlatCritChanceModPerLevel FLOAT DEFAULT 0,
+	PercentCritChanceMod FLOAT DEFAULT 0,
+	FlatCritDamageMod FLOAT DEFAULT 0,
+	rFlatCritDamageModPerLevel FLOAT DEFAULT 0,
+	PercentCritDamageMod FLOAT DEFAULT 0,
+	FlatBlockMod FLOAT DEFAULT 0,
+	PercentBlockMod FLOAT DEFAULT 0,
+	FlatSpellBlockMod FLOAT DEFAULT 0,
+	rFlatSpellBlockModPerLevel FLOAT DEFAULT 0,
+	PercentSpellBlockMod FLOAT DEFAULT 0,
+	FlatEXPBonus FLOAT DEFAULT 0,
+	PercentEXPBonus FLOAT DEFAULT 0,
+	rPercentCooldownMod FLOAT DEFAULT 0,
+	rPercentCooldownModPerLevel FLOAT DEFAULT 0,
+	rFlatTimeDeadMod FLOAT DEFAULT 0,
+	rFlatTimeDeadModPerLevel FLOAT DEFAULT 0,
+	rPercentTimeDeadMod FLOAT DEFAULT 0,
+	rPercentTimeDeadModPerLevel FLOAT DEFAULT 0,
+	rFlatGoldPer10Mod FLOAT DEFAULT 0,
+	rFlatMagicPenetrationMod FLOAT DEFAULT 0,
+	rFlatMagicPenetrationModPerLevel FLOAT DEFAULT 0,
+	rPercentMagicPenetrationMod FLOAT DEFAULT 0,
+	rPercentMagicPenetrationModPerLevel FLOAT DEFAULT 0,
+	FlatEnergyRegenMod FLOAT DEFAULT 0,
+	rFlatEnergyRegenModPerLevel FLOAT DEFAULT 0,
+	FlatEnergyPoolMod FLOAT DEFAULT 0,
+	rFlatEnergyModPerLevel FLOAT DEFAULT 0,
+	PercentLifeStealMod FLOAT DEFAULT 0,
+	PercentSpellVampMod FLOAT DEFAULT 0
+)
+
+
+CREATE TABLE items(
+	Name VARCHAR(64) PRIMARY KEY,
+	Description VARCHAR(600),
+	FlatHPPoolMod FLOAT DEFAULT 0,
+	rFlatHPModPerLevel FLOAT DEFAULT 0,
+	FlatMPPoolMod FLOAT DEFAULT 0,
+	rFlatMPModPerLevel FLOAT DEFAULT 0,
+	PercentHPPoolMod FLOAT DEFAULT 0,
+	PercentMPPoolMod FLOAT DEFAULT 0,
+	FlatHPRegenMod FLOAT DEFAULT 0,
+	rFlatHPRegenModPerLevel FLOAT DEFAULT 0,
+	PercentHPRegenMod FLOAT DEFAULT 0,
+	FlatMPRegenMod FLOAT DEFAULT 0,
+	rFlatMPRegenModPerLevel FLOAT DEFAULT 0,
+	PercentMPRegenMod FLOAT DEFAULT 0,
+	FlatArmorMod FLOAT DEFAULT 0,
+	rFlatArmorModPerLevel FLOAT DEFAULT 0,
+	PercentArmorMod FLOAT DEFAULT 0,
+	rFlatArmorPenetrationMod FLOAT DEFAULT 0,
+	rFlatArmorPenetrationModPerLevel FLOAT DEFAULT 0,
+	rPercentArmorPenetrationModPerLevel FLOAT DEFAULT 0,
+	FlatPhysicalDamageMod FLOAT DEFAULT 0,
+	rFlatPhysicalDamageModPerLevel FLOAT DEFAULT 0,
+	PercentPhysicalDamageMod FLOAT DEFAULT 0,
+	FlatMagicDamageMod FLOAT DEFAULT 0,
+	rFlatMagicDamageModPerLevel FLOAT DEFAULT 0,
+	PercentMagicDamageMod FLOAT DEFAULT 0,
+	FlatMovementSpeedMod FLOAT DEFAULT 0,
+	rFlatMovementSpeedModPerLevel FLOAT DEFAULT 0,
+	PercentMovementSpeedMod FLOAT DEFAULT 0,
+	rPercentMovementSpeedModPerLevel FLOAT DEFAULT 0,
+	FlatAttackSpeedMod FLOAT DEFAULT 0,
+	PercentAttackSpeedMod FLOAT DEFAULT 0,
+	rPercentAttackSpeedModPerLevel FLOAT DEFAULT 0,
+	rFlatDodgeMod FLOAT DEFAULT 0,
+	rFlatDodgeModPerLevel FLOAT DEFAULT 0,
+	PercentDodgeMod FLOAT DEFAULT 0,
+	FlatCritChanceMod FLOAT DEFAULT 0,
+	rFlatCritChanceModPerLevel FLOAT DEFAULT 0,
+	PercentCritChanceMod FLOAT DEFAULT 0,
+	FlatCritDamageMod FLOAT DEFAULT 0,
+	rFlatCritDamageModPerLevel FLOAT DEFAULT 0,
+	PercentCritDamageMod FLOAT DEFAULT 0,
+	FlatBlockMod FLOAT DEFAULT 0,
+	PercentBlockMod FLOAT DEFAULT 0,
+	FlatSpellBlockMod FLOAT DEFAULT 0,
+	rFlatSpellBlockModPerLevel FLOAT DEFAULT 0,
+	PercentSpellBlockMod FLOAT DEFAULT 0,
+	FlatEXPBonus FLOAT DEFAULT 0,
+	PercentEXPBonus FLOAT DEFAULT 0,
+	rPercentCooldownMod FLOAT DEFAULT 0,
+	rPercentCooldownModPerLevel FLOAT DEFAULT 0,
+	rFlatTimeDeadMod FLOAT DEFAULT 0,
+	rFlatTimeDeadModPerLevel FLOAT DEFAULT 0,
+	rPercentTimeDeadMod FLOAT DEFAULT 0,
+	rPercentTimeDeadModPerLevel FLOAT DEFAULT 0,
+	rFlatGoldPer10Mod FLOAT DEFAULT 0,
+	rFlatMagicPenetrationMod FLOAT DEFAULT 0,
+	rFlatMagicPenetrationModPerLevel FLOAT DEFAULT 0,
+	rPercentMagicPenetrationMod FLOAT DEFAULT 0,
+	rPercentMagicPenetrationModPerLevel FLOAT DEFAULT 0,
+	FlatEnergyRegenMod FLOAT DEFAULT 0,
+	rFlatEnergyRegenModPerLevel FLOAT DEFAULT 0,
+	FlatEnergyPoolMod FLOAT DEFAULT 0,
+	rFlatEnergyModPerLevel FLOAT DEFAULT 0,
+	PercentLifeStealMod FLOAT DEFAULT 0,
+	PercentSpellVampMod FLOAT DEFAULT 0
+)
+CREATE TABLE ChampionAbilities(
+    ID CHAR(64),
+    CName CHAR(64),
+    AName CHAR(64),
+    PRIMARY KEY (ID),
+    FOREIGN KEY (CName) REFERENCES Champions(Name) ON DELETE 
+CASCADE,
+    FOREIGN KEY (AName) REFERENCES Abilities(Name) ON DELETE CASCADE
+);
+
+CREATE TABLE masteryabilities(
+    Mid INT,
+    AName CHAR(64),
+    Rank INT,
+    PRIMARY KEY (Mid, AName),
+    FOREIGN KEY (Mid) REFERENCES masteries(MasteryID),
+    FOREIGN KEY (AName) REFERENCES abilities(Name)
+    );
+
+
+CREATE TABLE Summoner(
+ChampionName varchar(20),
+ChampionLevel INT,
+SummonerName varchar(20) PRIMARY KEY,
+FOREIGN KEY (ChampionName) REFERENCES champions(name)
+);
+
+CREATE TABLE SumRunes(
+SummonerName varchar(20),
+RunesName varchar(64),
+FOREIGN KEY (SummonerName) REFERENCES summoner(SummonerName),
+FOREIGN KEY (RunesName) REFERENCES runes(Name)
+);
+
+CREATE TABLE SumMasteries(
+SummonerName varchar(20),
+MasteryID INT,
+FOREIGN KEY (SummonerName) REFERENCES Summoner(SummonerName),
+FOREIGN KEY (MasteryID) REFERENCES masteries(MasteryID)
+);
+
+CREATE TABLE SumItems(
+SummonerName varchar(20),
+ItemsName varchar(20),
+FOREIGN KEY (SummonerName) REFERENCES Summoner(SummonerName),
+FOREIGN KEY (ItemsName) REFERENCES Items(Name)
+);
+
+DELETE FROM championabilities;
+DELETE FROM sumitems;
+DELETE FROM summasteries;
+DELETE FROM sumrunes;
+DELETE FROM summoner;
+DELETE FROM champions;
+DELETE FROM masteryabilities;
+DELETE FROM masteries;
+DELETE FROM abilities;
